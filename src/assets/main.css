@@ -1,0 +1,82 @@
+/* Globally */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+:root {
+  --primary-neon:rgba(10, 225, 255, 0.9);
+  --light-neon:rgba(8, 225, 255, 0.7);
+  --pulse-neon:rgba(80, 150, 200, 0.5);
+  --bright-neon:rgb(10, 225, 255);
+  --off-neon:rgb(50, 50, 50);
+  
+  --neon-shadow:0 0 5px 5px var(--light-neon), 0 0 5px 5px var(--light-neon) inset;
+  --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+  --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 5px var(--bright-neon) inset;
+  --neon-shadow-text:0 0 5px var(--primary-neon);
+  --grid-layout-gap: 15px;
+}
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
+  text-decoration: none;
+  list-style: none;
+}
+/* Globally */
+a { 
+  font-family: 'Michroma', sans-serif;
+  font-size: 11px;
+  color:var(--primary-neon);
+  text-transform: uppercase;
+  text-shadow:var(--neon-shadow-text);
+  text-decoration: none; 
+} 
+/* Each state */
+
+/* App */
+#app {
+  width: 100vw;
+  height: 100vh;
+  background: #080808;
+}
+
+/* Grids */
+.grid-container {
+  display: grid;
+  grid-column-gap: var(--grid-layout-gap);
+}
+
+/* Inputs */
+.input__search {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight;
+}
+
+.input__search:focus {
+  @apply outline-none shadow-outline;
+}
+
+.input__field {
+  font-family: 'Michroma', sans-serif;
+  font-size: 12px;
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid rgb(50, 50, 50);
+  padding: 10px 15px 10px 15px;
+  color: gray;
+  @apply w-full leading-tight;  
+}
+
+.input__field:focus {
+  border: 1px solid var(--bright-neon);
+  outline-style: none;
+}
+
+.input__label {
+  font-family: 'Michroma', sans-serif;
+  font-size: 12px;
+  color:var(--primary-neon);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  display: block;
+}
+
